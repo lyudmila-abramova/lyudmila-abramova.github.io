@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Людмила Абрамова — технический специалист онлайн-школ</title>
+  <meta name="description" content="Настройка GetCourse, чат-боты на Salebot, автоворонки, вебинары и автовебинары для экспертов, онлайн-школ и продюсеров.">
+  <meta property="og:title" content="Людмила Абрамова — технический специалист онлайн-школ">
+  <meta property="og:description" content="GetCourse, чат-боты, автоворонки, вебинары. Портфолио, услуги и цены.">
+  <meta property="og:image" content="img/avatar.png">
+  <link rel="icon" href="img/avatar.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero photo-right" id="hero">
+    <img class="avatar" src="img/avatar.png" alt="Людмила Абрамова">
+    <div>
+      <div class="eyebrow"><span class="dot"></span>Технический специалист онлайн-школ</div>
+      <h1>Людмила Абрамова</h1>
+      <p class="lead">Собираю чат-ботов и автоворонки на Salebot и GetCourse для экспертов, онлайн-школ и продюсеров.</p>
+      <a class="btn-main" href="https://t.me/ALyudmila" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+  </section>
+
+  <h2 class="sec">Почему со мной удобно работать</h2>
+  <div class="why">
+    <div><b><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="var(--yellow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Внимательность</b><p>Не упускаю ни одной детали в настройке</p></div>
+    <div><b><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="var(--yellow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Стратегия</b><p>Предлагаю решения с учётом нюансов вашего проекта</p></div>
+    <div><b><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="var(--yellow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Сроки</b><p>Выполняю работы корректно и точно в срок</p></div>
+    <div><b><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="var(--yellow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>На связи</b><p>Отвечаю на вопросы в течение 15 минут</p></div>
+    <div><b><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10.5l4 4 8-9" fill="none" stroke="var(--yellow)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Неразглашение</b><p>Не разглашаю информацию заказчика</p></div>
+  </div>
+
+  <h2 class="sec">Разделы</h2>
+  <div class="tiles">
+    <button class="tile wide" data-open="portfolio"><span><span class="t-title">Портфолио и проекты</span><span class="t-sub">Примеры работ: что я настроила и какой результат это дало</span></span><span class="arrow">→</span></button>
+    <button class="tile" data-open="services"><span><span class="t-title">Услуги и цены</span><span class="t-sub">Что входит в каждую услугу и сколько стоит</span></span><span class="arrow">→</span></button>
+    <button class="tile" data-open="reviews"><span><span class="t-title">Рекомендации</span><span class="t-sub">Отзывы и кто готов рекомендовать</span></span><span class="arrow">→</span></button>
+    <button class="tile" data-open="skills"><span><span class="t-title">Навыки</span><span class="t-sub">Платформы и сервисы, с которыми работаю</span></span><span class="arrow">→</span></button>
+    <button class="tile" data-open="contacts"><span><span class="t-title">Мои контакты</span><span class="t-sub">Telegram, ВКонтакте, MAX, почта</span></span><span class="arrow">→</span></button>
+  </div>
+
+  <div class="footer">
+    <p>Не нашли нужную услугу? Напишите мне, обсудим вашу задачу.</p>
+    <a class="btn-main" href="https://t.me/ALyudmila" target="_blank" rel="noopener">Написать в Telegram</a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <div class="m-head">
+      <button class="btn-ghost" id="back" hidden>← Назад</button>
+      <span></span>
+      <button class="btn-ghost" id="close">Закрыть ✕</button>
+    </div>
+    <div class="m-body" id="m-body"></div>
+  </div>
+</div>
+
+  <!-- Содержимое поп-апов. Каждый <template> — одно окно.
+       data-title — заголовок окна, data-parent — куда ведёт кнопка «Назад». -->
+  <template id="tpl-portfolio" data-title="Портфолио и проекты">
+    <div class="cover"><span class="dot"></span>Портфолио и проекты</div>
+    <p>Выберите проект, чтобы посмотреть подробности:</p>
+    <button class="list-btn" data-go="p_rent">Rent Club <span>→</span></button>
+    <button class="list-btn" data-go="p_cm">Convert Monster / РЕОМ <span>→</span></button>
+    <button class="list-btn" data-go="p_funnel">Воронка прогрева и продаж <span>→</span></button>
+    <button class="list-btn" data-go="p_bonus">Бонус за подписку <span>→</span></button>
+    <button class="list-btn" data-go="p_vizitka">Бот-визитка на Python <span>→</span></button>
+  </template>
+  <template id="tpl-p_rent" data-title="Rent Club" data-parent="portfolio">
+    <img class="shot-img" src="img/portfolio_rentclub_frame.jpg" alt="Скриншоты бота Rent Club">
+    <p>Бизнес-клуб для собственников посуточной аренды. С 2023 года технический специалист и куратор клуба.</p>
+    <div class="links"><a href="https://rentclub.vip" target="_blank" rel="noopener">rentclub.vip</a><a href="https://club.rentclub.vip/choice-page" target="_blank" rel="noopener">Бот в деле</a></div>
+    <h4>1. Бот-онбординг новых резидентов</h4>
+    <p>Раньше вступление шло через онлайн-собеседование: несколько дней ожидания, ручная оценка кандидата, отправка ссылки на оплату.</p>
+    <p>Я автоматизировала процесс ботом на Salebot в Telegram и ВКонтакте. Бот собирает анкету, рассказывает о клубе, выдаёт ссылку на оплату, а неподходящим заявкам вежливо отказывает. Ответы через API уходят в GetCourse, куратору приходит уведомление.</p>
+    <p><b>Результат:</b> вступление сократилось с нескольких дней до нескольких минут.</p>
+    <h4>2. Техническое ведение онлайн-школы на GetCourse</h4>
+    <p>Полное ведение платформы: новые продукты и предложения, контроль оплат, рассылки, страницы, сборка курсов и уроков, создание промоакций и ботов под потребности клуба по подписке, техническая поддержка пользователей.</p>
+    <p>Автоматизировала ключевые процессы: рекуррентные платежи, контроль пропущенных оплат, задачи куратору по каждой новой анкете. Собрано 5–7 курсов, более 200 уроков.</p>
+    <p><b>Результат:</b> резиденты больше не теряют доступ из-за забытого платежа.</p>
+    <h4>3. Куратор клуба</h4>
+    <p>Принимаю новых резидентов, организую еженедельные онлайн-эфиры, нетворкинг и бизнес-игры, помогаю резидентам находить нужные материалы.</p>
+    <p><b>Результат:</b> за время моего кураторства резидентов стало втрое больше.</p>
+  </template>
+  <template id="tpl-p_cm" data-title="Convert Monster / РЕОМ" data-parent="portfolio">
+    <img class="shot-img" src="img/portfolio_convertmonster_frame.jpg" alt="Convert Monster">
+    <p>Convert Monster — агентство интернет-маркетинга Антона Петроченкова, автора книг «Идеальный Landing Page» и «Маркетинг для немаркетологов». РЕОМ («Реальный отдел маркетинга») — его направление для собственников бизнеса: отделы маркетинга под ключ. Веду техническую часть проекта больше трёх лет.</p>
+    <div class="links"><a href="https://convertmonster.ru" target="_blank" rel="noopener">convertmonster.ru</a><a href="https://cmonster.io/new_reom" target="_blank" rel="noopener">cmonster.io/new_reom</a></div>
+    <h4>1. Рассылки</h4>
+    <p>Техническая настройка и отправка рассылок по email, через ботов, SMS и голосовые: регулярных информационных и прицельных под конкретные задачи.</p>
+    <p><b>Результат:</b> одно сообщение доходит до аудитории сразу по нескольким каналам.</p>
+    <h4>2. Вебинары и автовебинары полным циклом</h4>
+    <p>Беру на себя весь технический процесс: от настройки трансляции до проведения эфира с полным сопровождением спикера, всех рассылок и напоминаний. По итогам прошедшего эфира собираю автовебинарную воронку на GetCourse или Bizon 365.</p>
+    <p><b>Результат:</b> многоканальная система напоминаний работает без сбоев, а один эфир продолжает продавать в записи.</p>
+    <h4>3. Создание курсов</h4>
+    <p>Весь цикл: от создания продукта и предложения до сборки курса с уроками, настройки доступов и проверки домашних заданий.</p>
+    <p><b>Результат:</b> курс готов к продаже и обучению без доработок со стороны команды.</p>
+    <h4>Инструменты</h4>
+    <p style="color:var(--muted);margin-bottom:6px">Трансляции и автовебинары</p>
+    <div class="chips"><span>StreamYard</span><span>Zoom</span><span>Bizon 365</span><span>GetCourse</span><span>Edbot</span></div>
+    <p style="color:var(--muted);margin:10px 0 6px">Рассылки и напоминания</p>
+    <div class="chips"><span>Salebot</span><span>Sendsay</span><span>SMS-центр</span><span>Звонобот</span></div>
+    <p style="margin-top:14px">Конкретные показатели обсуждаю при личном разговоре.</p>
+  </template>
+  <template id="tpl-p_funnel" data-title="Многоканальная воронка прогрева и продаж" data-parent="portfolio">
+    <p>Проект Convert Monster / РЕОМ. Одна из первых больших автоматизаций агентства в Salebot.</p>
+    <img class="shot-img" src="img/portfolio_cm_funnel_frame.jpg" alt="Схема воронок в Salebot">
+    <p><b>Задача:</b> прогревать людей перед продажей. Люди приходят из рекламы и рассылок, и каждому нужно выдать обещанный материал и довести до заявки.</p>
+    <h4>Что сделала</h4>
+    <ul class="dots"><li>Продумала, как всё будет работать, и собрала бота в Salebot для Telegram.</li><li>Настроила точки входа: в зависимости от источника запускается нужная воронка.</li><li>Настроила переключение воронок: бот помнит, какую воронку человек уже прошёл, и переводит на следующую. Всего три воронки, без повторов.</li><li>Настроила выдачу материалов по разным правилам: одни гайды и чек-листы человек получает сразу после входа в бот, другие только после пятидневной воронки. Бот сам определяет, кому и когда что выдать.</li><li>По ходу прогрева человек получает видеоматериалы, в конце ссылку на сайт, где оставляет заявку на консультацию или покупку.</li></ul>
+    <h4>Как рос проект</h4>
+    <p>Начинали с 5–6 точек входа. Реклама приносила заявки и продажи, поэтому агентство подключало новые источники, а я добавляла под них новые точки входа и материалы. Сейчас их 18.</p>
+    <h4>Примеры точек входа</h4>
+    <div class="links"><a href="https://t.me/Edu_ConvertMonster_bot?start=mini-landing-lead-magnet-system-tg-guide-system-1" target="_blank" rel="noopener">Гайд «Система маркетинга»</a><a href="https://t.me/Edu_ConvertMonster_bot?start=mini-landing-lead-magnet-system-tg-guide-smm-2" target="_blank" rel="noopener">Гайд «SMM»</a><a href="https://t.me/Edu_ConvertMonster_bot?start=mini-landing-lead-magnet-system-tg-guide-im-1" target="_blank" rel="noopener">Гайд «Интернет-маркетолог»</a></div>
+    <p><b>Результат:</b> бот работает больше трёх лет без сбоев: все точки входа и переходы между воронками работают так же, как в первый день.</p>
+  </template>
+  <template id="tpl-p_bonus" data-title="Бонус за подписку" data-parent="portfolio">
+    <p>Боты, которые выдают полезные материалы в обмен на подписку. Так заказчик растит аудиторию своих соцсетей. Настраивала их для Telegram и Instagram.</p>
+    <h4>Telegram: подарок за подписку на каналы</h4>
+    <ul class="dots"><li>Бот проверяет подписку на заданные каналы, их может быть один или несколько.</li><li>Если человек не подписан на какой-то канал, бот сообщает об этом и предлагает подписаться и вернуться за обещанным подарком.</li><li>Когда подписка подтверждена, бот выдаёт подарок.</li><li>Если запланировано мероприятие, бот присылает напоминания и ссылку на эфир.</li><li>После эфира участники получают запись и полезные материалы от спикеров.</li></ul>
+    <p style="color:var(--muted)">Пример: регистрация на онлайн-конференцию.</p>
+    <ol class="steps">
+    <li><span class="step-n">1</span><div><b>Регистрация</b><p>Человек приходит в бота и узнаёт, что билет можно получить бесплатно при условии подписки на каналы спикеров.</p><img class="step-img" src="img/bonus_step1.jpg" alt="Шаг 1: приветствие и регистрация на конференцию"></div></li>
+    <li><span class="step-n">2</span><div><b>Подписка на каналы</b><p>Бот показывает каналы восьми спикеров и кнопку «Я подписался».</p><img class="step-img" src="img/bonus_step2.jpg" alt="Шаг 2: список каналов для подписки"></div></li>
+    <li><span class="step-n">3</span><div><b>Проверка и подарки</b><p>Бот проверяет подписки и выдаёт обещанные материалы.</p><img class="step-img" src="img/bonus_step3.jpg" alt="Шаг 3: проверка подписки и выдача подарков"></div></li>
+    <li><span class="step-n">4</span><div><b>Эфир и запись</b><p>Дальше человек получает напоминание и ссылку на эфир, а после эфира запись с материалами от спикеров.</p></div></li>
+    </ol>
+    <h4>Instagram: подарок за комментарий или реакцию</h4>
+    <ul class="dots"><li>Человек оставляет комментарий или реакцию под постом или Reels либо пишет в Директ, чтобы получить обещанный подарок.</li><li>Бот проверяет, подписан ли человек на аккаунт.</li><li>Если подписан, подарок приходит сразу.</li><li>Если нет, бот предлагает подписаться и вернуться за подарком.</li></ul>
+    <p><b>Результат:</b> повторяемый механизм роста аудитории. Один сценарий подходит под разные подарки и мероприятия.</p>
+  </template>
+  <template id="tpl-p_vizitka" data-title="Бот-визитка на Python" data-parent="portfolio">
+    <img class="shot-img" src="img/banner-welcome.png" alt="Баннер бота-визитки">
+    <p>Мой собственный бот в Telegram, который знакомит клиентов с моей работой: портфолио, услуги и цены, рекомендации, навыки и контакты.</p>
+    <div class="links"><a href="https://t.me/LAbramova_bot?start=site" target="_blank" rel="noopener">Открыть бота</a></div>
+    <h4>Что сделала</h4>
+    <ul class="dots"><li>Написала бота на Python (библиотека aiogram), без конструктора.</li><li>Вынесла тексты, цены и ссылки в отдельный файл: содержание меняется без правки кода.</li><li>Продумала навигацию: меню разделов, подменю проектов и услуг, кнопки возврата.</li><li>Оформила бота в едином стиле: аватар, баннер и обложки разделов.</li><li>Добавила счётчик входов по источникам (Telegram, ВКонтакте, сайт), который не хранит персональные данные.</li></ul>
+    <p><b>Результат:</b> вся информация обо мне собрана в одном месте и открывается в Telegram за пару секунд.</p>
+  </template>
+  <template id="tpl-services" data-title="Услуги и цены">
+    <div class="cover"><span class="dot"></span>Услуги и цены</div>
+    <p>Выберите услугу, чтобы посмотреть, что в неё входит:</p>
+    <button class="list-btn" data-go="s_support">Техническое сопровождение проекта <span>→</span></button>
+    <button class="list-btn" data-go="s_webinar">Настройка вебинара <span>→</span></button>
+    <button class="list-btn" data-go="s_bot">Создание чат-бота <span>→</span></button>
+    <button class="list-btn" data-go="s_autoweb">Настройка автовебинара <span>→</span></button>
+    <button class="list-btn" data-go="s_training">Создание тренинга <span>→</span></button>
+    <button class="list-btn" data-go="s_school">Запуск школы под ключ <span>→</span></button>
+  </template>
+  <template id="tpl-s_support" data-title="Техническое сопровождение проекта" data-parent="services">
+    <h4>Что входит</h4><ul class="dots"><li>Создание рассылок (email, VK, Telegram)</li><li>Создание лендингов</li><li>Подготовка онлайн-курсов к новым потокам</li><li>Настройка тренингов, уроков, домашних заданий</li><li>Работа с пользователями, заказами и покупками</li><li>Создание и настройка воронок, дашбордов, работа с аналитикой</li><li>Подготовка вебинаров и автовебинаров</li><li>Создание промоакций и модификаторов для увеличения продаж</li><li>Техническая поддержка пользователей</li></ul><div class="price-box"><b>от 25 000 ₽ / от 40 000 ₽</b><span>25 000 при совмещении с другим проектом (2–3 часа в день), 40 000 при полной занятости</span></div>
+  </template>
+  <template id="tpl-s_bot" data-title="Создание чат-бота" data-parent="services">
+    <p>GetCourse, BotHelp, Salebot, Python. Собираю ботов под разные задачи.</p><h4>Что входит</h4><ul class="dots"><li>Онбординг и сбор заявок с передачей данных в CRM или GetCourse</li><li>Презентация продукта или услуги: программа, отзывы, детали</li><li>Прогрев и продажи: воронки с несколькими точками входа, в том числе автовебинарные</li><li>Проверка подписки: доступ к материалам за подписку на каналы</li><li>Сбор данных и трекинг: отчёты участников с автоматической выгрузкой</li></ul><div class="price-box"><b>от 5 000 ₽</b><span>Стоимость зависит от технического задания. Примеры покажу на созвоне</span></div>
+  </template>
+  <template id="tpl-s_autoweb" data-title="Настройка и сопровождение автовебинара" data-parent="services">
+    <h4>Что входит</h4><ul class="dots"><li>Сценарий автовебинара</li><li>Настройка дня и времени трансляции</li><li>Страница или форма регистрации</li><li>Страница активации и страница благодарности</li><li>Письма-напоминания (до 3)</li><li>Письма после вебинара (до 2)</li><li>Страницы-тизеры до и после вебинара</li><li>Загрузка вашей презентации</li><li>Продающая форма с тарифами</li><li>Настройка автовебинарной комнаты</li></ul><div class="price-box"><b>от 18 000 ₽</b></div>
+  </template>
+  <template id="tpl-s_training" data-title="Создание тренинга" data-parent="services">
+    <p>До 15 уроков.</p><h4>Что входит</h4><ul class="dots"><li>Выбор типа урока под задачу</li><li>Настройка задания в уроке</li><li>Формат ответа на задание</li><li>Принятие ответов</li><li>Стоп-уроки</li><li>Расписание уроков</li><li>Настройка тренинга при потоковом обучении</li><li>Защита контента</li></ul><div class="price-box"><b>от 12 000 ₽</b></div>
+  </template>
+  <template id="tpl-s_webinar" data-title="Настройка и сопровождение вебинара" data-parent="services">
+    <h4>Что входит</h4><ul class="dots"><li>Страница или форма регистрации</li><li>Страница активации и страница благодарности</li><li>Письма-напоминания (до 3)</li><li>Письма после вебинара (до 2)</li><li>Страницы-тизеры до и после вебинара</li><li>Загрузка вашей презентации</li><li>Продающая форма с тарифами</li><li>Настройка вебинарной комнаты</li><li>Сопровождение спикера во время трансляции: контроль технической работы вебинара</li></ul><div class="price-box"><b>от 8 000 ₽</b><span>Вебинар до 2 часов, каждый дополнительный час +500 ₽</span></div>
+  </template>
+  <template id="tpl-s_school" data-title="Запуск онлайн-школы на GetCourse «под ключ»" data-parent="services">
+    <h4>Что входит</h4><ul class="dots"><li>Базовая настройка аккаунта: домен, логотип и favicon, https, почта для писем</li><li>Продукты, связка с тренингом, предложения под каждый тариф</li><li>Подключение платёжной системы (модуль GetCourse или другая на ваш выбор)</li><li>Уроки и тренинги: до 15 уроков с вашим контентом</li><li>Продающий вебинар: страницы регистрации, подтверждения, активации и продажи, презентация, формы, проверка комнаты</li><li>Цепочки писем для вебинара: подтверждение, после регистрации, контентные (до 2), напоминания (до 4), продающие (до 2)</li></ul><div class="price-box"><b>от 30 000–35 000 ₽</b></div>
+  </template>
+  <template id="tpl-reviews" data-title="Рекомендации">
+    <div class="cover"><span class="dot"></span>Рекомендации</div>
+    <button class="list-btn" data-go="r_reviews">Отзывы <span>→</span></button>
+    <button class="list-btn" data-go="r_rec">Готовы рекомендовать <span>→</span></button>
+  </template>
+  <template id="tpl-r_reviews" data-title="Отзывы" data-parent="reviews">
+    <p>Отзывы о моей работе из чата «Мари про отзывы — инфобизнес».</p>
+    <img class="shot-img" src="img/review_poddubnaya_frame.jpg" alt="Отзыв Аллы Поддубной">
+    <img class="shot-img" src="img/review_sedenko_frame.jpg" alt="Отзыв Ирины Седенко">
+    <p><b>Ирина Седенко</b>, <a href="https://t.me/mari_otzyv/113946" target="_blank" rel="noopener">читать в оригинале</a></p>
+  </template>
+  <template id="tpl-r_rec" data-title="Готовы рекомендовать" data-parent="reviews">
+    <p>Эти люди работали со мной и расскажут о совместной работе. Можно обратиться к любому из них:</p>
+    <ul class="dots"><li><a href="https://t.me/ilya_buzunkin" target="_blank" rel="noopener">Илья Бузункин</a>, основатель бизнес-клуба Rent Club</li><li><a href="https://t.me/svagency" target="_blank" rel="noopener">Всеволод Славинский</a>, Digital-директор</li><li><a href="https://t.me/irish_krym" target="_blank" rel="noopener">Ирина Седенко</a>, Boss primetime.sevastopol, продюсер онлайн-школ</li></ul>
+  </template>
+  <template id="tpl-skills" data-title="С чем работаю">
+    <div class="cover"><span class="dot"></span>С чем работаю</div>
+    <h4>Платформа для онлайн-школ</h4><div class="chips"><span>GetCourse: LMS, CRM, рассылки, автоворонки, вебинары, страницы, Get Модуль</span></div>
+    <h4>Конструкторы чат-ботов</h4><div class="chips"><span>Salebot (основной)</span><span>BotHelp</span><span>PuzzleBot</span><span>SmartSender</span><span>Python (aiogram)</span></div>
+    <h4>Вебинары и трансляции</h4><div class="chips"><span>StreamYard</span><span>Zoom</span><span>GetCourse</span><span>Bizon 365</span><span>Яндекс Телемост</span><span>ВК Трансляции</span><span>OBS</span></div>
+    <h4>Автовебинары</h4><div class="chips"><span>GetCourse</span><span>Bizon 365</span><span>Edbot: автовебинары через бота в WhatsApp</span></div>
+    <h4>Видеохостинги</h4><div class="chips"><span>Vimeo</span><span>Kinescope</span></div>
+    <h4>Рассылки</h4><div class="chips"><span>Sendsay (email)</span><span>SMS-центр</span><span>Звонобот (голосовые)</span></div>
+    <h4>Таблицы</h4><div class="chips"><span>Google Таблицы</span><span>Excel</span></div>
+    <p style="margin-top:14px">В новом сервисе разбираюсь и подключаю в работу самостоятельно.</p>
+  </template>
+  <template id="tpl-contacts" data-title="Мои контакты">
+    <div class="cover"><span class="dot"></span>Мои контакты</div>
+    <p>Свяжитесь со мной любым удобным способом:</p>
+    <a class="list-btn" href="https://t.me/ALyudmila" target="_blank" rel="noopener">Telegram <span>@ALyudmila →</span></a>
+    <a class="list-btn" href="https://vk.com/ludmila_technical_helpers" target="_blank" rel="noopener">ВКонтакте <span>→</span></a>
+    <a class="list-btn" href="https://max.ru/u/f9LHodD0cOJX8qAOv1nmnOa-3f56gTrO8K5VHKbvoERj8qrX2VuRWI-K4HY" target="_blank" rel="noopener">MAX <span>→</span></a>
+    <div class="list-btn" style="cursor:text">Почта <span style="user-select:all">a.lyudmila42@gmail.com</span></div>
+    <a class="list-btn" href="https://t.me/LAbramova_bot?start=site" target="_blank" rel="noopener">Бот-визитка @LAbramova_bot <span>→</span></a>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
